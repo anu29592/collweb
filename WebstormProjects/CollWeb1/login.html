@@ -3,43 +3,64 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
     <script src="script1.js"></script>
+    <title>LOGIN PAGE</title>
+    <style type="text/css">
+        <!--
+        .style1 {font-size: 24px}
+        .style2 {font-size: 14px}
+        body,td,th {
+            color: #FFFFFF;
+        }
+        body {
+            background-color: #336699;
+        }
+        .style3 {font-size: 14px; color: #FFFFFF; }
+        -->
+    </style>
 </head>
+
 <body ng-controller="MainCtrl">
- <p align="left">ADMIN LOGIN</p>
-<!-- Form to get username & Password -->
+
+<div ng-app align="center" class="style2">
+    <h1 style="background-color: #666699">CollWEB</h1>
+
+</div>
+<!-- Form to get admin username & Password -->
+<br>
+<br>
 <form>
-     <label align="left">Username
-     <input type="text" ng-model="username"placeholder="More than 3 alphabets" class="form-control"  ng-minlength="3" ng-maxlength="6" required />
-    </label>
-    <label align="left">Password
-            <input style="color: black" type="text" name="password" placeholder="password" class="form-control" required />
-                </label>
-                <p align="left">
-           <button  type="submit" ng-click="submit()">login</button>
+    <p><span class="style1"></span></p>
+    <p align="left">ADMIN LOGIN</p>
+    <p align="left">Username
+        <input type="text" ng-model="username"placeholder="More than 3 alphabets" class="form-control"  ng-minlength="3" ng-maxlength="6" required />
+    </p>
+    <p align="left">Password
+        <input style="color: black" type="text" name="password" placeholder="password" class="form-control" required />
+    </p>
+    <p align="left">
+        <button  type="submit" ng-click="submit()">login</button>
 
-            <a href="Register.js" name="Register" class="style2" style="color: #FFFFFF"> Register</a>
-        </p>
-    
+        <!--<a href="login.js" name="Register" class="style2" style="color: #FFFFFF"> Register</a>-->
+    </p>
+
 </form>
-
- <p align="left">ADMIN LOGIN</p>
+<br>
+<br>
+<br>
+<p align="left">MEMBER LOGIN</p>
 <!-- Form to get member username & Password -->
 <form>
-     <label align="right">Username
-     <input type="text" ng-model="username1"placeholder="More than 3 alphabets" class="form-control"  ng-minlength="3" ng-maxlength="6" required />
-    </label>
-    <label align="right">Password
-            <input style="color: black" type="text" name="password1" placeholder="password" class="form-control" required />
-                </label>
-                <p align="right">
-           <button  type="submit" ng-click="submit()">login</button>
-
-            <a href="Register.js" name="Register1" class="style2" style="color: #FFFFFF"> Register</a>
-        </p>
-    
+    <p align="left">Username
+        <input type="text" ng-model="username1"placeholder="More than 3 alphabets" class="form-control"  ng-minlength="3" ng-maxlength="6" required />
+    </p>
+    <p align="left">Password
+        <input style="color: black" type="text" name="password1" placeholder="password" class="form-control" required />
+    </p>
+    <p align="left">
+        <button  type="submit" ng-click="submit()">login</button>
+     <!-- <a href="Register.js" name="Register1" class="style2" style="color: #FFFFFF"> Register</a>-->
+    </p>
 </form>
-
-
 </body>
 </html>
 
