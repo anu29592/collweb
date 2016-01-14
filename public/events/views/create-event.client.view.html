@@ -1,0 +1,81 @@
+<div ng-controller="EventsController">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">College Events</a>
+            </div>
+			
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+						<a href="#page-top"></a>
+					</li>
+					<li class="page-scroll" data-ng-if="!authentication.user">
+						<a href="/login">Login</a>
+					</li>	
+					<li class="page-scroll" data-ng-if="!authentication.user">
+                        <a href="/register">Register</a>
+                    </li>
+					<li class="page-scroll" data-ng-if="authentication.user">
+                        <a href="/#!/events">Events</a>
+                    </li>
+					<li class="page-scroll" data-ng-if="authentication.user">
+                        <a href="/logout">Hello <span data-ng-bind="authentication.user.username" data-ng-if="authentication.user"></span>, Logout?</a>
+                    </li>
+				</ul>	
+			</div>
+		</div>
+	</nav>
+	
+	<section class="container">
+		<h3>New Event</h3>
+		<form class="form-signin" data-ng-submit="create()" novalidate>
+			<div>
+				<label for="title" class="sr-only">Title</label>
+				<div>
+					<input type="text" ng-model="title" id="title" placeholder="Title" required autofocus class="form-control"/>
+				</div>
+			</div>
+
+			<br/>
+
+			<div>
+				<label for="branch" class="sr-only">Branch</label>
+				<div>
+					<select ng-model="branch.selectedOption" ng-options="option.name for option in branch.availableBranch track by option.name" required class="form-control">
+					</select>
+				</div>
+			</div>
+			
+			<br/>
+			
+			<div>
+				<label for="description" class="sr-only">Description</label>
+				<div>
+					<textarea data-ng-model="description" id="description" cols="30" rows="10" placeholder="Description" class="form-control"></textarea>
+				</div>
+			</div>
+			
+			<br/>
+			
+			<div>
+				<button type="submit" class="btn btn-lg btn-primary btn-block" id="createEvent">Create Event</button>
+			<div>
+			
+			<br/>
+			
+			<div ng-show="error">
+				<strong ng-bind="error"></strong>
+			</div>
+		</form>
+	</section>
+</div>	
+			
+				
+			

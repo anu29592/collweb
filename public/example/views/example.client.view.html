@@ -1,0 +1,113 @@
+<div ng-controller="ExampleController">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="col-lg-12 text-center">
+                <img class="img-responsive" src="img/logofh.jpg" alt="">
+                    </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll" data-ng-if="!authentication.user">
+                        <a href="/login">Login</a>
+                    </li>
+                    <li class="page-scroll" data-ng-if="!authentication.user">
+                        <a href="/register">Register</a>
+                    </li>
+
+                    <li class="page-scroll" data-ng-if="authentication.user">
+						Hello <span data-ng-bind="authentication.user.username" data-ng-if="authentication.user"></span>
+                        <a href="/logout"><span data-ng-if="authentication.user">Logout</span></a>
+                    </li>                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header data-ng-if="!authentication.user">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="intro-text">
+                        <span class="name">COLL WEB</span>
+                        <hr class="star-light">
+                        <span class="skills">MEAN Stack Application </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-12 text-center">
+                <img class="img-responsive" src="img/students.jpg" alt="" align="center" style="width: 7cm" height="7cm">
+            </div>
+        </div>
+    </header>
+
+    <section class="success" id="about" data-ng-if="authentication.user">
+        <div class="container">
+	    	<ul>
+				<h1>
+					<li><a href="/#!/events">List Events</a></li>
+				</h1>
+				
+				<h1>
+					<li data-ng-if="authentication.user.role == 'admin'">
+						<a href="/#!/events/create">Create Event</a>
+					</li>
+				</h1>
+			</ul>        
+        </div>
+    </section>
+
+	<!--<section data-ng-show="!authentication.user">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-lg-12 text-center">-->
+                    <!--<h2>How it looks</h2>-->
+                    <!--<hr class="star-primary">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                <!--<div class="col-sm-4 portfolio-item">-->
+                    <!--<img src="img/sections/create.jpg" class="img-responsive" alt="">-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 portfolio-item">-->
+                    <!--<img src="img/sections/list.jpg" class="img-responsive" alt="">-->
+                <!--</div>-->
+                <!--<div class="col-sm-4 portfolio-item">-->
+                    <!--<img src="img/sections/edit.jpg" class="img-responsive" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+	
+	
+    <!-- About Section -->
+    <section class="success" id="about" data-ng-if="!authentication.user">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>What is it?</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <p class="text-center">It is a platform for managing Events built on MEAN stack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

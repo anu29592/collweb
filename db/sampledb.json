@@ -1,0 +1,14 @@
+{ "_id" : { "oid" : "519320aeb61f7af7b4fa57fe" }, "username" : "firstuser", "password" : "Password@123", "email" : "seconduser@gmail.com","firstname" : "first", "lastname" : "user" , "role" : "student" }
+{ "_id" : { "oid" : "51932758b61f7af7b4fa57ff" }, "username" : "seconduser", "password" : "Password@123", "email" : "seconduser@gmail.com", "firstname" : "second" , "lastname" : "user" , "role" : "student" }
+{ "_id" : { "oid" : "519328e0b61f7af7b4fa5800" }, "username" : "thirduser", "password" : "Password@123", "email" : "thirduser@gmail.com", "firstname" : "third" , "lastname" : "user" , "role" : "student" }
+{ "_id" : 10004, "email" : "fourthuser1@gmail.com", "password" : "fourthuser", "username" : "fourthuser","firstname" : "fourth" , "lastname" : "user" , "role" : "student"  }
+
+{ "_id" : 1, "username" : "admin123", "password" : "admin123*", "email" : "admin123@gmail.com", "firstname" : "fourth" , "lastname" : "user" , "role" : "student"  }
+
+{ "_id" : { "oid" : "51931cfab61f7af7b4fa57fd" }, "active" : true, "email" : "firstuser@gmail.com", "password" : "firstuser", "username" : "firstuser" }
+{ "_id" : { "oid" : "5193777fd206b30027000001" }, "address" : "iLoveMongo1address", "email" : "srirangan@gmail.com", "password" : "iLoveMongo", "username" : "srirangan" }
+{ "email" : "piyas.de@gmail.com", "password" : "piyasde", "username" : "piyasde", "_id" : { "oid" : "51938208c37ecd7822000001" } }
+{ "email" : "email", "password" : "password", "username" : "username", "_id" : { "oid" : "51c523453a7f45d018000001" } }
+{ "email" : "x@y.z", "password" : "thisuser", "username" : "thisuser", "_id" : { "oid" : "51c523f83a7f45d018000002" } }
+{ "email" : "a@b.c", "password" : "anotheruser", "username" : "anotheruser", "_id" : { "oid" : "51c52c303a7f45d018000003" } }
+{ "email" : "x@y.z", "password" : "aaaa", "username" : "debopam", "_id" : { "oid" : "51c7ed82bfb8a46014000001" } }

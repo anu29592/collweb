@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <%=title %>
+    </title>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+	<link href="css/mean.css" rel="stylesheet">
+	
+	<link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/#!/">COLL WEB</a>
+            </div>
+		</div>	
+	</nav>
+	
+	<br/>
+	<br/>
+	
+    <div class="container">
+        <form class="form-signin" action="/register" method="post">
+            <h2 class="form-signin-heading text-center">Register</h2>
+
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus/>
+			
+			<br/>
+
+			<label for="password" class="sr-only">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required/>
+			
+			<br/>
+			
+            <label for="firsname" class="sr-only">Firstname</label>
+            <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Firstname" required/>
+			
+			<br/>
+
+			<label for="lastname" class="sr-only">Lastname</label>
+            <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Lastname" required/>
+			
+			<br/>
+			
+            <label for="email" class="sr-only">E-mail</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required/> 
+						
+			<br/>
+			
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+          </form>
+		  
+		  <div class="row">
+            <div class="center-block text-center">
+                <a href="/login">Login</a>
+            </div>
+              <div class="row">
+                  <div class="center-block text-center"style="color: #ff2023">
+                  <% for(var i in messages) { %>
+                  <div class="flash"><%= messages[i] %></div>
+                  <% } %>
+</div>
+              </div>
+	</div>
+	</div>
+</body>
+</html>	
+	

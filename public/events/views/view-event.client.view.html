@@ -1,0 +1,65 @@
+<div data-ng-controller="EventsController">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">College Events</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+
+                    <li class="page-scroll" data-ng-if="!authentication.user">
+                        <a href="/login">Login</a>
+                    </li>
+                    <li class="page-scroll" data-ng-if="!authentication.user">
+                        <a href="/register">Register</a>
+                    </li>
+
+                    <li class="page-scroll" data-ng-if="authentication.user.role == 'admin'">
+                        <a href="/#!/events/create">Create</a>
+                    </li>
+                    <li class="page-scroll" data-ng-if="authentication.user">
+                        <a href="/#!/events">Events</a>
+                    </li>
+                    <li class="page-scroll" data-ng-if="authentication.user">
+                        <a href="/logout">Hello <span data-ng-bind="authentication.user.username" data-ng-if="authentication.user"></span>, Logout?</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <section data-ng-init="findOne()" class="container">
+		<p><strong>Branch: {{event.branch}}</strong></p>
+		
+		<br/>
+		
+        <h4 data-ng-bind="event.title" ng-class="event.completed?'completed':''"></h4>
+        <!--<div data-ng-if="authentication.user._id == event.creator._id">
+            <a href="/#!/events/{{event._id}}/edit">edit</a>
+            <a href="#" data-ng-click="delete();">delete</a>
+        </div>-->
+		<div data-ng-if="authentication.user.role == 'admin'">
+			<a href="/#!/events/{{event._id}}/edit">edit</a>
+			<a href="#" data-ng-click="delete();">delete</a>
+		</div>
+        <small>
+        <em data-ng-bind="event.created | date:'mediumDate'"></em>		
+        </small>
+        <p data-ng-bind="event.description"></p>
+		
+    </section>
+</div>

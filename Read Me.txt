@@ -1,0 +1,6 @@
+1. Start Mongod: mongod --dbpath "path to your db foldeR"
+
+2. Start server: Navigate to Project root directory and run
+	node server
+
+3. Nothing else start using your app :-)
